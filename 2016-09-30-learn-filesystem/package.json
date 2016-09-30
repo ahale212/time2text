@@ -1,0 +1,16 @@
+{
+  "name": "learn-filesystem",
+  "version": "1.0.0",
+  "description": "learn-filesystem",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.1.0"
+  }
+}
