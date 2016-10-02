@@ -7,3 +7,4 @@ build
 gradle
 target
 .DS_Store
+npm-debug.log
