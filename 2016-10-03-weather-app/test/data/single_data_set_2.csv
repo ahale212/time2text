@@ -1,0 +1,2 @@
+"ID","ForecastSiteCode","PredictionId","SiteName","Country","Continent","StartTime","Day","Date","TimeStep","SignificantWeatherId","ScreenTemperature","WindSpeed","WindDirection","WindGust","VisibilityCode","RelativeHumidity","ProbabilityPrecipitation","FeelsLikeTemperature","UVIndex","PredictionTime"
+"-10000000","0","356aa06e-28e9-4366-87c6-3f767c15b959","Test Location (3)","ENGLAND","EUROPE","0","Wednesday","2016-08-31T00:00:00","0","0","15","0","0","0","MO","0","0","0","0","0"
