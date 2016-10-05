@@ -1,0 +1,23 @@
+extends ../layout
+
+block content
+  h1 Twitter Search
+  p Please enter below how you would like to search twitter
+
+  h2 Search a user's timeline
+  form(method='GET', action='/twitter')
+    input(name='user_timeline')
+    input(type='submit', value='Search', name='submit')
+
+  h2 Search for a phrase
+  form
+    input(name='q')
+    input(type='submit')
+
+  if (tweets)
+    hr
+    h2 Results
+
+    ul
+      each tweet in tweets
+        li= tweet.text
