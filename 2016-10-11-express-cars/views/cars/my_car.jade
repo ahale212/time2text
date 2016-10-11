@@ -1,0 +1,15 @@
+extends ../layout
+
+block content
+  h1 Car
+  table
+    tr
+      td Make
+      td #{car.make}
+    tr
+      td Year
+      td #{car.year}
+    tr
+      td Price
+      td #{car.price}
+  a(href="/") Back to home

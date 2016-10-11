@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+  h1 New Car:
+  form(method="POST" action="/cars")
+    p
+      label(for="make") Make
+      input(type="text" name="make")
+    p
+      label(for="year") Year
+      input(type="text" name="year")
+    p
+      label(for="price") Price
+      input(type="text" name="price")
+    p
+      input(type="submit" value="Create")
