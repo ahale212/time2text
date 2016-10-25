@@ -5,16 +5,16 @@ const time2text = require('./time2text')
 
 const testFileName = process.argv[2]
 console.log('Reading test data from file: ' + testFileName + ' ...')
-fs.readFile(testFileName, function (err, data) {
+fs.readFile(testFileName, (err, data) => {
   if (err) console.log('Error: ', err)
   const testData = JSON.parse(data)
 
   console.log('Testing time2text ...')
   const failedTests = testData
-  .filter(function (item) {
+  .filter((item) => {
     return item.text !== time2text(item.time)
   })
-  .map(function (item) {
+  .map((item) => {
     return { time: item.time, expected: item.text, actual: time2text(item.time) }
   })
 
