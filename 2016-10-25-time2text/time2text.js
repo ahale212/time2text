@@ -1,7 +1,7 @@
 'use strict'
 
 function time2text(time) {
-    var hour = time.substring(0, 2)
+    var hour = parseInt(time.substring(0, 2))
     var minute = time.substring(3, 5)
     var am = morn_or_night(hour)
     var oClock = is_it_oclock(minute)
@@ -54,6 +54,30 @@ function time2text(time) {
     }
     if (time === '12:00') {
         return 'noon'
+    }
+    if (time === '13:00') {
+        return "one " + oClock + am
+
+    }
+    if (time === '14:00') {
+        return "two " + oClock + am
+
+    }
+    if (time === '15:00') {
+        return "three " + oClock + am
+
+    }
+    if (time === '16:00') {
+        return "four " + oClock + am
+
+    }
+    if (time === '17:00') {
+        return "five " + oClock + am
+
+    }
+    if (time === '18:00') {
+        return "six " + oClock + am
+
     } else {
         return ('midnight')
     }
@@ -61,9 +85,10 @@ function time2text(time) {
 }
 
 function morn_or_night(hour) {
-    if (hour[0] >= 0 && hour[0] < 12) {
+
+    if (hour >= 0 && hour < 12) {
         return "in the morning"
-    } else if (hour[0] > 12 && hour[0] < 18) {
+    } else if (hour > 12 && hour <= 18) {
         return "in the afternoon"
     } else
         return "in the evening"
