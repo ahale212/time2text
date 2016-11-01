@@ -58,7 +58,16 @@ describe('Time to Text converter', () => {
     it("Time is 17:00 expects five o'clock in the afternoon", () => {
         expect(time2text('17:00')).to.equal("five o'clock in the afternoon")
     })
-    it("Time is 18:00 expects six o'clock in the afternoon", () => {
-        expect(time2text('18:00')).to.equal("six o'clock in the afternoon")
+    it("Time is 18:00 expects six o'clock in the evening", () => {
+        expect(time2text('18:00')).to.equal("six o'clock in the evening")
+    })
+    it("Time is 12:14 expects twelve fourteen in the afternoon", () => {
+        expect(time2text('12:14')).to.equal("twelve fourteen in the afternoon")
+    })
+    it("Time is 05:06 expects five oh six in the morning", () => {
+        expect(time2text('05:06')).to.equal("five oh six in the morning")
+    })
+    it("Time is 22:52 expects ten fifty-two in the evening", () => {
+        expect(time2text('22:52')).to.equal("ten fifty-two in the evening")
     })
 })

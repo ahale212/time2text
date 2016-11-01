@@ -1,5 +1,18 @@
 'use strict'
 
+// const testData = require('./test_data')
+//
+// function time2text(time) {
+//     var text = ''
+//     var time = time
+//     testData.map((item, index) => {
+//         if (time === item.time) {
+//             return text = item.text
+//         }
+//     })
+//     return text
+// }
+
 function time2text(time) {
     var hour = parseInt(time.substring(0, 2))
     var minute = time.substring(3, 5)
@@ -88,7 +101,7 @@ function morn_or_night(hour) {
 
     if (hour >= 0 && hour < 12) {
         return "in the morning"
-    } else if (hour > 12 && hour <= 18) {
+    } else if (hour > 12 && hour < 18) {
         return "in the afternoon"
     } else
         return "in the evening"
